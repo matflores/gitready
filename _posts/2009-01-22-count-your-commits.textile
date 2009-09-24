@@ -1,13 +1,13 @@
 ---
-published: false
+published: true
 layout: post
-title: count your commits
+title: contando los commits
 category: intermediate
 ---
 
-Ever wondered how many commits you've contributed to a project? Or perhaps, which coworker has really done nothing (or maybe they have huge changes and fewer commits!) Well, wonder no more, for @git shortlog@ is a nice way to find out. 
+¿Alguna vez te has preguntado con cuántos commits has contribuido a un proyecto? O quizás, ¿qué compañero de trabajo no ha hecho absolutamente nada aún? (aunque tal vez hicieron contribuciones enormes en pocos commits). Bueno, no preguntes más, la solución es usar @git shortlog@.
 
-I'm running this on my "clone of jekyll":http://github.com/qrush/jekyll, which is how this blog is generated:
+Esto lo estoy ejecutando sobre mi "clon de jekyll":http://github.com/qrush/jekyll, que es lo que uso para generar este blog:
 
 <pre>
 $ git shortlog -s -n
@@ -28,7 +28,7 @@ $ git shortlog -s -n
   1  Tom Kirchner
 </pre>
 
-The @-s@ option squashes all of the commit messages into the number of commits, and the @-n@ option sorts the list by number of commits. 
+La opción @-s@ muestra solo la cantidad de commits en lugar de mostrar cada commit message, y la opción @-n@ ordena la lista según la cantidad de commits de cada desarrollador.
 
-This command could also be useful for changelogs, since you could easily dump all the changes each person has done. There's a few other neat options: @-e@ will append emails, and you can control columns widths with @-w@. Check out the "manpage":http://www.kernel.org/pub/software/scm/git/docs/git-shortlog.html for more information.
+Este comando también puede ser útil para crear changelogs, ya que podemos listar los cambios que hizo cada desarrollador. También hay otras opciones interesantes: @-e@ incluye las direcciones de email, y @-w@ nos permite controlar el ancho e indentación de las columnas. Para más información, revisa la "documentación":http://www.kernel.org/pub/software/scm/git/docs/git-shortlog.html.
 
